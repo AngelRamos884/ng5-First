@@ -1,0 +1,13 @@
+<div *ngIf="users?.length > 0; else noUsers">
+  <ul *ngFor="let user of users" class="collection">
+    <li class="collection-item">
+      {{user.displayName}}
+    </li>
+    <!-- <img src="{{user.photoURL}}" alt=""> -->
+  </ul>
+</div>
+
+<ng-template #noItems>
+  <hr>
+  <h5>There not are items to list</h5>
+</ng-template>
